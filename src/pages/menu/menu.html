@@ -18,19 +18,11 @@
       <img src="/assets/images/cover.jp" alt="">
 
     <ion-list> <!--Crea una lista-->
-    
-    <button ion-item>
-        <ion-icon item-left Denunciar name="megaphone" >  </ion-icon>
-           Denunciar</button>
-    
-       <button ion-item> <ion-icon item-left Denunciar name="logo-angular"> </ion-icon>
-      Escudo Comunitario</button>
-
-    <button ion-item>  <ion-icon item-left Denunciar name="paper"> </ion-icon>
-      Ver historial de delicuentes</button>
-    
-    <button ion-item><ion-icon item-left Denunciar name="eye"> </ion-icon>
-       Informacion de cuadrantes</button>
+      
+    <button ion-item *ngFor="let page of pages" > <!--se repite n numero de pagina (clic)="goToPage(page.component)"-->
+      <ion-icon item-left name="{{page.icon}}" ></ion-icon>  
+      {{ page.titulo }}
+    </button>
     
   </ion-list>
   
