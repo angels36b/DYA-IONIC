@@ -15,19 +15,20 @@
 <ion-menu [content]="NAV"> <!--CONTEMT ES UN ATRIBUTO-->
  
   <ion-content>
-      <img src="/assets/images/cover.jp" alt="">
+   
+  <ion-list> <!--Crea una lista-->
 
-    <ion-list> <!--Crea una lista-->
-      
-    <button ion-item *ngFor="let page of pages" > <!--se repite n numero de pagina (clic)="goToPage(page.component)"-->
-      <ion-icon item-left name="{{page.icon}}" ></ion-icon>  
-      {{ page.titulo }}
-    </button>
-    
+    <button ion-item (click)="goDenuncia()"> <ion-icon item-left name="eye"> </ion-icon> Denuncia </button>
+    <button ion-item (click)="goEscudo()"> <ion-icon item-left name="logo-angular"> </ion-icon> Escudo comunitario</button>
+    <button ion-item (click)="goHistorial()"> <ion-icon item-left name="folder-open"> </ion-icon> Historial </button>
+    <button ion-item (click)="goPolicia()"> <ion-icon item-left name="person"> </ion-icon> Policia </button>
+    <<button ion-item (click)= "goNotificaciones()"> <ion-icon item-left name="alarm"> </ion-icon> Notificaion de Alarma </button>
+
+
+          
   </ion-list>
   
-    <button ion-button>   Lorem 1 </button>  <!--Creamos un boton-->
-    <button ion-button>   Lorem 1 </button>
+  
   
   </ion-content>
   </ion-menu> 

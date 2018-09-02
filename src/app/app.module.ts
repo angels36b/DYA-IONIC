@@ -6,16 +6,27 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {RegistroPage} from '../pages/registro/registro';
+
 //import {MenuPageModule} from '../pages/menu/menu.module';
 import { MenuPage } from '../pages/menu/menu';
+import { DenunciaPage} from '../pages/denuncia/denuncia';
+import { EscudoPage } from '../pages/escudo/escudo';
+import { HistorialPage } from '../pages/historial/historial';
+import { PoliciaPage } from '../pages/policia/policia';
+import { RegistroPage } from '../pages/registro/registro'
+import { NotificacionesPage } from '../pages/notificaciones/notificaciones'
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    RegistroPage,
-    MenuPage
-    
+    HomePage,  
+    MenuPage,
+    DenunciaPage,
+    EscudoPage,
+    HistorialPage,
+    PoliciaPage,
+    NotificacionesPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
@@ -26,8 +37,14 @@ import { MenuPage } from '../pages/menu/menu';
   entryComponents: [
     MyApp,
     HomePage,
-    RegistroPage,
-    MenuPage
+    MenuPage,
+    DenunciaPage,
+    EscudoPage,
+    HistorialPage,
+    PoliciaPage,
+    NotificacionesPage,
+    RegistroPage
+
 
   ],
   providers: [

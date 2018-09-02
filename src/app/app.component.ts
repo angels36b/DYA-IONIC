@@ -2,12 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
-import {DenunciaPage} from '../pages/denuncia/denuncia';
-import {EscudoPage} from '../pages/escudo/escudo';
-import {HistorialPage} from '../pages/historial/historial';
-import { PoliciaPage } from '../pages/policia/policia';
+//import {DenunciaPage} from '../pages/denuncia/denuncia';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -21,10 +18,7 @@ export class MyApp {
    
     this.rootPage = HomePage;
     this.pages = [
-    {titulo: "Denuncie",           component: DenunciaPage, icon:"megaphone"},
-    {titulo: "Historial",          component: HistorialPage, icon:"analitycs"},
-    {titulo: "Ver cuadrantes",     component: PoliciaPage, icon:"information-circle"},
-    {titulo: "Escudo comunitario", component: EscudoPage, icon:"home"}
+ 
   ];
 
     platform.ready().then(() => {
@@ -38,5 +32,7 @@ export class MyApp {
   goToPage(page){
     this.nav.setRoot(page);
   }
+ 
+ 
 }
 

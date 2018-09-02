@@ -10,10 +10,12 @@ import { MenuPage } from '../menu/menu';
 export class HomePage {
   username:string;
   password:string;
-  constructor(public navCtrl: NavController) {
 
+  constructor(public navCtrl: NavController) 
+  {
 
   }
+
   login(){
     console.log("NameCiudadano:"+ this.username);
     console.log("Password: "+ this.password);
@@ -22,6 +24,7 @@ export class HomePage {
   goRegistro(){
     this.navCtrl.push(RegistroPage);
   }
+  
  goMenu(){  //void=no devuelve nada
    this.navCtrl.push(MenuPage);
 
