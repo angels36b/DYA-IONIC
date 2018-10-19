@@ -1,0 +1,46 @@
+<!--
+  Generated template for the ComplaintPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Denunciar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      Fecha de denuncia:
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      Documento del usuario:
+      <ion-input placeholder="Digite su documento: " [(ngModel)]="Documento">  </ion-input>
+      Descripción de hechos:
+      <ion-textarea placeholder="Describa los hechos..."></ion-textarea>
+      <!--
+      Tipo de victima:
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="Personal">Personal</ion-option>
+        <ion-option value="Terceros">Terceros/ion-option>
+      </ion-select>
+      -->
+      Describa el físico del ladrón:
+      <ion-textarea placeholder="Describa al ladron"></ion-textarea>
+      Foto del ladrón:
+      <ion-card>
+        <img alt="usuario" src="image/images.jpg">
+      </ion-card>
+      <!--
+      ¿Por qué denuncia?
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="Atraco">Atraco</ion-option>
+        <ion-option value="Robo">Robo/ion-option>
+      </ion-select>
+      -->
+    </ion-list>
+    <button ion-button full (click)="registro()">Registrar denuncia</button>
+</ion-content>

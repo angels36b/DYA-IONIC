@@ -1,7 +1,5 @@
 {
-  "name": "denuncie",
-  "integrations": {
-    "cordova": {}
-  },
+  "name": "DYAIonic",
+  "integrations": {},
   "type": "ionic-angular"
 }

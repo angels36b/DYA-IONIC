@@ -1,33 +1,33 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { RegistroPage } from '../registro/registro';
 import { MenuPage } from '../menu/menu';
+import { ClientPage } from '../client/client';
+import { LocationsPage } from '../locations/locations';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
   username:string;
   password:string;
-
-  constructor(public navCtrl: NavController) 
-  {
+  constructor(
+    public navCtrl: NavController
+    ) {
 
   }
 
-  login(){
-    console.log("NameCiudadano:"+ this.username);
-    console.log("Password: "+ this.password);
+  iraMenu(){
+    this.navCtrl.push(MenuPage);
   }
 
-  goRegistro(){
-    this.navCtrl.push(RegistroPage);
+  iraRegistro(){
+    this.navCtrl.push(ClientPage);
   }
-  
- goMenu(){  //void=no devuelve nada
-   this.navCtrl.push(MenuPage);
 
+  iraLocations(){
+    this.navCtrl.push(LocationsPage);
   }
 
 }

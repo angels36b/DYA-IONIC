@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DenunciaPage} from '../denuncia/denuncia';
-import { EscudoPage } from '../escudo/escudo';
-import { HistorialPage } from '../historial/historial'
-import { PoliciaPage } from '../policia/policia';
-import { RegistroPage } from '../registro/registro';
-import { NotificacionesPage } from '../notificaciones/notificaciones'
+import { ComplaintPage } from '../complaint/complaint';
+import { HistoryCriminalPage } from '../history-criminal/history-criminal';
+import { QuadrantPage } from '../quadrant/quadrant';
+import { AlertNotificationPage } from '../alert-notification/alert-notification';
 
 /**
  * Generated class for the MenuPage page.
@@ -21,35 +19,30 @@ import { NotificacionesPage } from '../notificaciones/notificaciones'
 })
 export class MenuPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+    ) {
+  }
+
+  goDenuncia(){
+    this.navCtrl.push(ComplaintPage);
+  }
+
+  goHistorial(){
+    this.navCtrl.push(HistoryCriminalPage);
+  }
+
+  goCuadrante(){
+    this.navCtrl.push(QuadrantPage);
+  }
+
+  goNotificaciones(){
+    this.navCtrl.push(AlertNotificationPage);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MenuPage');
   }
 
-  goDenuncia(){
-    this.navCtrl.push(DenunciaPage);  
-  }
-
-  goEscudo(){
-    this.navCtrl.push(EscudoPage);
-  }
-
-  goHistorial(){
-    this.navCtrl.push(HistorialPage);
-  }
-
-  goPolicia() {
-    this.navCtrl.push(PoliciaPage);
-  }
-
-  goRegistro(){
-    this.navCtrl.push(RegistroPage);
-  }
-
-  goNotificaciones(){
-    this.navCtrl.push(NotificacionesPage);
-  }
-  
 }

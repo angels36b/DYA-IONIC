@@ -13,24 +13,18 @@
 </ion-header>
 
 <ion-menu [content]="NAV"> <!--CONTEMT ES UN ATRIBUTO-->
- 
+
   <ion-content>
-   
-  <ion-list> <!--Crea una lista-->
 
-    <button ion-item (click)="goDenuncia()"> <ion-icon item-left name="eye"> </ion-icon> Denuncia </button>
-    <button ion-item (click)="goEscudo()"> <ion-icon item-left name="logo-angular"> </ion-icon> Escudo comunitario</button>
-    <button ion-item (click)="goHistorial()"> <ion-icon item-left name="folder-open"> </ion-icon> Historial </button>
-    <button ion-item (click)="goPolicia()"> <ion-icon item-left name="person"> </ion-icon> Policia </button>
-    <<button ion-item (click)= "goNotificaciones()"> <ion-icon item-left name="alarm"> </ion-icon> Notificaion de Alarma </button>
-
-
-          
-  </ion-list>
-  
-  
-  
+    <ion-list> <!--Crea una lista-->
+      <button ion-item (click)="goDenuncia()"> <ion-icon item-left name="eye"> </ion-icon> Denuncia </button>
+      <button ion-item (click)="goEscudo()"> <ion-icon item-left name="logo-angular"> </ion-icon> Escudo comunitario</button>
+      <button ion-item (click)="goHistorial()"> <ion-icon item-left name="folder-open"> </ion-icon> Historial </button>
+      <button ion-item (click)="goCuadrante()"> <ion-icon item-left name="person"> </ion-icon> Policia </button>
+      <button ion-item (click)= "goNotificaciones()"> <ion-icon item-left name="alarm"> </ion-icon> Notificaion de Alarma </button>
+    </ion-list>
+    
   </ion-content>
-  </ion-menu> 
-  
-  <ion-nav #NAV [root]="rootPage"> </ion-nav> <!-- Componente de navegacion, SE ENCARGA DE MOSOSTRAR LA PAGINA ROOT=COMO RAIZ-->
+</ion-menu> 
+
+<ion-nav #NAV [root]="rootPage"> </ion-nav> <!-- Componente de navegacion, SE ENCARGA DE MOSOSTRAR LA PAGINA ROOT=COMO RAIZ-->

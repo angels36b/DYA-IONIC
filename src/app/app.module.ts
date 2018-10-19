@@ -3,54 +3,53 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
-//import {MenuPageModule} from '../pages/menu/menu.module';
 import { MenuPage } from '../pages/menu/menu';
-import { DenunciaPage} from '../pages/denuncia/denuncia';
-import { EscudoPage } from '../pages/escudo/escudo';
-import { HistorialPage } from '../pages/historial/historial';
-import { PoliciaPage } from '../pages/policia/policia';
-import { RegistroPage } from '../pages/registro/registro'
-import { NotificacionesPage } from '../pages/notificaciones/notificaciones'
+import { ClientPage } from '../pages/client/client';
+import { ComplaintPage } from '../pages/complaint/complaint';
+import { HistoryCriminalPage } from '../pages/history-criminal/history-criminal';
+import { QuadrantPage } from '../pages/quadrant/quadrant';
+import { AlertNotificationPage } from '../pages/alert-notification/alert-notification';
+import { UserServiProvider } from '../providers/user-servi/user-servi';
+import { LocationsPage } from '../pages/locations/locations';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,  
+    HomePage,
     MenuPage,
-    DenunciaPage,
-    EscudoPage,
-    HistorialPage,
-    PoliciaPage,
-    NotificacionesPage,
-    RegistroPage
+    ClientPage,
+    ComplaintPage,
+    HistoryCriminalPage,
+    QuadrantPage,
+    AlertNotificationPage,
+    LocationsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    //MenuPageModule
+    HttpClientModule,
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     MenuPage,
-    DenunciaPage,
-    EscudoPage,
-    HistorialPage,
-    PoliciaPage,
-    NotificacionesPage,
-    RegistroPage
-
-
+    ClientPage,
+    ComplaintPage,
+    HistoryCriminalPage,
+    QuadrantPage,
+    AlertNotificationPage,
+    LocationsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserServiProvider
   ]
 })
 export class AppModule {}
